@@ -1,2 +1,2 @@
 # Sharpshooters-Roundup
-Sharpshooter's Roundup is a deltarune/undertale fan-mod using Kristal
+Sharpshooter's Roundup is a deltarune fan-mod using Kristal

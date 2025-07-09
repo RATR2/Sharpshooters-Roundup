@@ -40,6 +40,6 @@
     <property name="marker" value="entry"/>
    </properties>
   </object>
-  <object id="17" name="cutscene" x="519.931" y="157.471" width="37.8811" height="126.829"/>
+  <object id="17" name="cutscene" x="522.598" y="157.471" width="37.8811" height="126.829"/>
  </objectgroup>
 </map>

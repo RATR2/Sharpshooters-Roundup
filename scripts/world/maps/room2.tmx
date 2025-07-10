@@ -6,7 +6,9 @@
  <properties>
   <property name="name" value="Test Map - Room 2"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/castle.tsx"/>
+ <tileset firstgid="1" name="castle" tilewidth="40" tileheight="40" tilecount="40" columns="4">
+  <image source="../../../assets/sprites/tilesets/castle.png" width="160" height="400"/>
+ </tileset>
  <layer id="1" name="tiles" width="39" height="9">
   <data encoding="csv">
 0,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -40,6 +42,6 @@
     <property name="marker" value="entry"/>
    </properties>
   </object>
-  <object id="17" name="cutscene" x="519.931" y="157.471" width="37.8811" height="126.829"/>
+  <object id="17" name="cutscene" x="522.598" y="157.471" width="37.8811" height="126.829"/>
  </objectgroup>
 </map>

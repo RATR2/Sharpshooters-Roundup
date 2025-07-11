@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="9" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="29">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="9" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="29">
  <editorsettings>
   <export target="room2.lua" format="lua"/>
  </editorsettings>
@@ -63,7 +63,7 @@
   <object id="22" name="cam" x="859.171" y="158.512">
    <point/>
   </object>
-  <object id="24" name="krisknockloc" x="591.408" y="216.478">
+  <object id="24" name="krisknockloc" x="579.741" y="231.145">
    <point/>
   </object>
   <object id="25" name="ralseiknockloc" x="582.481" y="305.003">

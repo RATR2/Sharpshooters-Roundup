@@ -97,5 +97,6 @@ return {
         cutscene:wait(0.6)
         Game:removePartyMember("ralsei")
         cutscene:startEncounter("dummy")
+        Game:addPartyMember("ralsei")
     end
 }

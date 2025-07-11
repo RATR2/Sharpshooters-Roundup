@@ -2,6 +2,8 @@ return {
     ---@param cutscene WorldCutscene
     
     encounter = function(cutscene, event)
+        local aurafarming = false -- real
+        local kris = cutscene:getCharacter("kris")
         local susie = cutscene:getCharacter("susie")
         local ralsei = cutscene:getCharacter("ralsei")
         local cam_x, cam_y = cutscene:getMarker("cam")
@@ -17,7 +19,7 @@ return {
         cutscene:text("* Odd...[wait:2]\n* All that's inside is...", "smile_side")
         cutscene:setSpeaker(susie)
         cutscene:text("* Tenna...?", "surprise")
-        Assets.playSound("impact")
+        Assets.playSound("grab")
         cutscene:wait(1)
         cutscene:setSpeaker()
         cutscene:text("* YOU MUST LEAVE.")
@@ -32,8 +34,68 @@ return {
         ralsei:setSprite("walk/right_1")
         cutscene:text("* IT FEEDS ON ATTENTION.[wait:1]\n* AND IT HAS BEEN STARVING.")
         Assets.playSound("hurt")
-        cutscene:text("* FOR A LONG.[wait:10]\n* [sound:hurt]LONG.[wait:10]\n* TIM[sound:hurt][next:true]")
-        Assets.playSound("impact")
+        cutscene:text("* FOR A LONG.[wait:10]\n* [sound:hurt]LONG.[wait:10]\n* TI[sound:hurt][next:true]")
+        Assets.playSound("grab")
         susie:setSprite("shock_right")
+        cutscene:wait(1)
+        local waittmr = 0.35
+        local detune = 1.2
+        Assets.playSound("stardrop",1,detune)
+        cutscene:wait(waittmr)
+        Assets.playSound("stardrop",1,detune)
+        cutscene:wait(waittmr)
+        Assets.playSound("stardrop",1,detune)
+        cutscene:wait(waittmr+1)
+        Assets.playSound("bigcut",1,1.1)
+        cutscene:wait(0.7)
+        Assets.playSound("criticalswing",2,1)
+        kris:setSprite("sit")
+        ralsei:setSprite("down")
+        local newkris_x, _ = cutscene:getMarker("krisknockloc")
+        local newralsei_x, _ = cutscene:getMarker("ralseiknockloc")
+        local hittext_x, hittext_y = cutscene:getMarker("hittextloc")
+        local tweentype = "out-cubic"
+        Game.world.timer:tween(0.7,kris, {x = newkris_x},tweentype)
+        Game.world.timer:tween(0.8,ralsei, {x = newralsei_x},tweentype)
+        local percent = DamageNumber("damage",999,hittext_x,hittext_y, {1,0,0})
+        percent.kill_others = true
+        percent.layer = WORLD_LAYERS["top"]
+        kris.world:addChild(percent)
+        cutscene:wait(1.2)
+        kris:shake(3)
+        susie:setSprite("walk/right_1")
+        kris:setSprite("walk/right_1")
+        if aurafarming then
+            kris:setSprite("pose")
+        end
+        cutscene:setSpeaker(susie)
+        cutscene:text("* Ralsei!", "surprise_frown")
+        cutscene:setSpeaker(ralsei)
+        cutscene:text("* I-its okay Susie...", "no_glasses_closed")
+        cutscene:text("* I'll be back in a\nmoment.", "pleased")
+        cutscene:wait(0.4)
+        local newralsei_x2, _ = cutscene:getMarker("ralseiknockloc2")
+        Game.world.timer:tween(0.6,ralsei, {x = newralsei_x2},tweentype)
+        cutscene:wait(0.6)
+        ralsei:shake(5)
+        cutscene:wait(0.4)
+        Assets.playSound("damage")
+        ralsei:setSprite("battle/defeat_1")
+        cutscene:wait(0.8)
+        local _, ralseihappyplacey = cutscene:getMarker("ralseihappyplace")
+        Game.world.timer:tween(5,ralsei, {y = ralseihappyplacey },tweentype)
+        cutscene:wait(0.8)
+        cutscene:setSpeaker(susie)
+        if aurafarming then
+            cutscene:text("* Alright, [wait:1]asshole...","bangs_teeth")
+            cutscene:text("* [wait:2].[wait:2].[wait:2]. [wait:1]Kris... [wait:1]\n* Kris, can you stop that?","nervous_side")
+            cutscene:wait(0.6)
+            kris:setSprite("walk/right_1")
+            cutscene:wait(0.3)
+        end
+        cutscene:text("* Alright, [wait:1]asshole.[wait:1]\n* Good luck.","bangs_teeth")
+        cutscene:wait(0.6)
+        Game:removePartyMember("ralsei")
+        cutscene:startEncounter("dummy")
     end
 }

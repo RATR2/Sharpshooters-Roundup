@@ -39,7 +39,7 @@ return {
                 Assets.playSound("moss_fanfare")
                 cutscene:text("* Congratulations![wait:20]\nyou got nothing...")
                 local kris = cutscene:getCharacter("kris")
-                local krisparty = kris:getPartyMember()
+                local krisparty = kris:getPartyMember() or nil
                 if krisparty ~= nil then
                     krisparty.title = "Cactus Inspector\nInspects all the cactus\non the room randomly."
                 end
@@ -185,7 +185,7 @@ return {
             ralseiDown(data.ralsei, data.tweentype)
         end
 
-        local aurafarming = true -- real
+        local aurafarming = false -- real
         local tweentype = "out-cubic"
         local kris = cutscene:getCharacter("kris")
         local susie = cutscene:getCharacter("susie")

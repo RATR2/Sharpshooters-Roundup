@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="9" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="29">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="9" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="38">
  <editorsettings>
   <export target="room2.lua" format="lua"/>
  </editorsettings>
@@ -11,7 +11,7 @@
  </tileset>
  <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>
  <imagelayer id="8" name="bg" parallaxx="0.7" parallaxy="1.1" repeatx="1">
-  <image source="../../../assets/sprites/hghuh3.png" width="352" height="264"/>
+  <image source="../../../assets/sprites/hghuh3.png" trans="cd3257" width="704" height="528"/>
  </imagelayer>
  <layer id="1" name="tiles" width="39" height="9">
   <data encoding="csv">
@@ -72,15 +72,21 @@
   <object id="26" name="hittextloc" x="668.031" y="299.052">
    <point/>
   </object>
-  <object id="27" name="ralseiknockloc2" x="560.164" y="306.491">
+  <object id="27" name="ralseicrawlloc" x="560.164" y="306.491">
    <point/>
   </object>
   <object id="28" name="ralseihappyplace" x="560.908" y="661.335">
    <point/>
   </object>
+  <object id="36" name="susierockz" x="642.738" y="662.079">
+   <point/>
+  </object>
+  <object id="37" name="susieknockloc" x="618.189" y="265.576">
+   <point/>
+  </object>
  </objectgroup>
  <objectgroup color="#ff00ff" id="5" name="objects">
-  <object id="9" name="transition" x="-40" y="200" width="40" height="80">
+  <object id="9" name="transition" x="-40" y="200" width="40" height="120">
    <properties>
     <property name="map" value="room1"/>
     <property name="marker" value="entry"/>
@@ -89,6 +95,41 @@
   <object id="17" name="script" x="600" y="200" width="37.402" height="120">
    <properties>
     <property name="cutscene" value="room1.encounter"/>
+   </properties>
+  </object>
+  <object id="29" name="interactable" x="0" y="160" width="80" height="40">
+   <properties>
+    <property name="cutscene" value="room1.cactus2"/>
+   </properties>
+  </object>
+  <object id="30" name="interactable" x="160" y="160" width="120" height="40">
+   <properties>
+    <property name="cutscene" value="room1.cactus2"/>
+   </properties>
+  </object>
+  <object id="31" name="interactable" x="369.236" y="157.05" width="120" height="40">
+   <properties>
+    <property name="cutscene" value="room1.cactus2"/>
+   </properties>
+  </object>
+  <object id="32" name="interactable" x="560" y="160" width="200" height="40">
+   <properties>
+    <property name="cutscene" value="room1.cactus2"/>
+   </properties>
+  </object>
+  <object id="33" name="interactable" x="1120" y="160" width="40" height="40">
+   <properties>
+    <property name="cutscene" value="room1.cactus2"/>
+   </properties>
+  </object>
+  <object id="34" name="interactable" x="1200" y="160" width="40" height="40">
+   <properties>
+    <property name="cutscene" value="room1.cactus2"/>
+   </properties>
+  </object>
+  <object id="35" name="interactable" x="1160" y="160" width="40" height="40">
+   <properties>
+    <property name="cutscene" value="room1.fakecactus"/>
    </properties>
   </object>
  </objectgroup>

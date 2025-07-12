@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 7,
-  nextobjectid = 37,
+  nextobjectid = 60,
   properties = {
     ["name"] = "??? - Cancelled Chapter"
   },
@@ -166,7 +166,7 @@ return {
           shape = "rectangle",
           x = 39.9583,
           y = 360,
-          width = 520.042,
+          width = 120.042,
           height = 40,
           rotation = 0,
           visible = true,
@@ -181,6 +181,58 @@ return {
           y = 120,
           width = 40,
           height = 240,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 56,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 360,
+          width = 120.042,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 57,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 440,
+          width = 280,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 58,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 400,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 59,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 400,
+          width = 40,
+          height = 40,
           rotation = 0,
           visible = true,
           properties = {}
@@ -225,12 +277,251 @@ return {
           x = 800,
           y = 200,
           width = 40,
-          height = 80,
+          height = 120,
           rotation = 0,
           visible = true,
           properties = {
             ["map"] = "room2",
             ["marker"] = "entry"
+          }
+        },
+        {
+          id = 37,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 440,
+          width = 280,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text"] = "* There's no going back now..."
+          }
+        },
+        {
+          id = 40,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 40,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 1,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 42,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 2,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 43,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 3,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 44,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 240,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 5,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 46,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 200,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 4,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 47,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 6,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 48,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 320,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 7,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 49,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 8,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 50,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 440,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 9,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 51,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 520,
+          y = 80,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 10,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 52,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 11,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 53,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 680,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 13,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 54,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 640,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 12,
+            ["cutscene"] = "room1.cactus"
+          }
+        },
+        {
+          id = 55,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 760,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cactusID"] = 14,
+            ["cutscene"] = "room1.cactus"
           }
         }
       }
@@ -254,8 +545,8 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 302,
-          y = 243.333,
+          x = 141,
+          y = 240.333,
           width = 0,
           height = 0,
           rotation = 0,
@@ -268,7 +559,7 @@ return {
           type = "",
           shape = "point",
           x = 760,
-          y = 250,
+          y = 280,
           width = 0,
           height = 0,
           rotation = 0,

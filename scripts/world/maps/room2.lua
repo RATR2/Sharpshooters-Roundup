@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 29,
+  nextobjectid = 38,
   properties = {
     ["name"] = "Test Map - Room 2"
   },
@@ -55,6 +55,7 @@ return {
     {
       type = "imagelayer",
       image = "../../../assets/sprites/hghuh3.png",
+      transparentcolor = "#cd3257",
       id = 8,
       name = "bg",
       class = "",
@@ -278,8 +279,8 @@ return {
           name = "krisknockloc",
           type = "",
           shape = "point",
-          x = 591.408,
-          y = 216.478,
+          x = 579.741,
+          y = 231.145,
           width = 0,
           height = 0,
           rotation = 0,
@@ -314,7 +315,7 @@ return {
         },
         {
           id = 27,
-          name = "ralseiknockloc2",
+          name = "ralseicrawlloc",
           type = "",
           shape = "point",
           x = 560.164,
@@ -332,6 +333,32 @@ return {
           shape = "point",
           x = 560.908,
           y = 661.335,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 36,
+          name = "susierockz",
+          type = "",
+          shape = "point",
+          x = 642.738,
+          y = 662.079,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 37,
+          name = "susieknockloc",
+          type = "",
+          shape = "point",
+          x = 618.189,
+          y = 265.576,
           width = 0,
           height = 0,
           rotation = 0,
@@ -362,7 +389,7 @@ return {
           x = -40,
           y = 200,
           width = 40,
-          height = 80,
+          height = 120,
           rotation = 0,
           visible = true,
           properties = {
@@ -383,6 +410,111 @@ return {
           visible = true,
           properties = {
             ["cutscene"] = "room1.encounter"
+          }
+        },
+        {
+          id = 29,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 160,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 30,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 160,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 31,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 369.236,
+          y = 157.05,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 32,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 160,
+          width = 200,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 33,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 1120,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 34,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 1200,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 35,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 1160,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.fakecactus"
           }
         }
       }

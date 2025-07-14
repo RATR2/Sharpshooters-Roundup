@@ -28,12 +28,12 @@ return {
             if cactusinspects == 0 then
                 cutscene:text("* ?!![wait:5] There are $150 Dark Dollars in here...[wait:4]\n* What is this?")
                 Assets.playSound("item")
-                cutscene:text("$150 Dark Dollars was added to your Money Hole.")
+                cutscene:text("(50 Dark Dollars was added to your Money Hole.)")
                 Game.money = Game.money + 150
             elseif cactusinspects == 1 then
-                cutscene:text("* Suprisingly,[wait:4] there was $50 Dark Dollars on this cactus...")
+                cutscene:text("* Suprisingly,[wait:4] there was 50 Dark Dollars on this cactus...")
                 Assets.playSound("item")
-                cutscene:text("$50 Dark Dollars was added to your Money Hole.")
+                cutscene:text("(50 Dark Dollars was added to your Money Hole.)")
                 Game.money = Game.money + 50
             elseif cactusinspects == 2 then
                 Assets.playSound("moss_fanfare")

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="9" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="38">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="9" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="38">
  <editorsettings>
   <export target="room2.lua" format="lua"/>
  </editorsettings>
@@ -10,8 +10,8 @@
   <image source="../../../assets/sprites/tilesets/castle.png" width="160" height="400"/>
  </tileset>
  <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>
- <imagelayer id="8" name="bg" parallaxx="0.7" parallaxy="1.1" repeatx="1">
-  <image source="../../../assets/sprites/hghuh3.png" trans="cd3257" width="704" height="528"/>
+ <imagelayer id="8" name="bg" offsetx="-114" offsety="-143" parallaxx="0.8" parallaxy="1.1">
+  <image source="../../../assets/sprites/hghuh3.png" trans="cd3257" width="2112" height="528"/>
  </imagelayer>
  <layer id="1" name="tiles" width="39" height="9">
   <data encoding="csv">
@@ -133,5 +133,4 @@
    </properties>
   </object>
  </objectgroup>
- <imagelayer id="10" name="bg2"/>
 </map>

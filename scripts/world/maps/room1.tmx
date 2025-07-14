@@ -8,10 +8,10 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/castle.tsx"/>
  <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>
- <imagelayer id="8" name="bg2" offsetx="-118.667" offsety="-194.667">
-  <image source="../../../../../../../../../Downloads/bg2.png" width="880" height="660"/>
+ <imagelayer id="8" name="bg2" offsetx="-199.667" offsety="-194.667">
+  <image source="../../../assets/sprites/bg2.png" width="880" height="660"/>
  </imagelayer>
- <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5">
+ <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5" offsetx="-81" offsety="0">
   <object id="3" x="600" y="160" width="200" height="40"/>
   <object id="5" x="560" y="320" width="240" height="40"/>
   <object id="61" x="14" y="-59" width="78" height="245"/>
@@ -29,7 +29,7 @@
    <polygon points="0,0 0,-17 -104,-17 -103.625,0.25"/>
   </object>
  </objectgroup>
- <objectgroup color="#ff00ff" id="4" name="objects">
+ <objectgroup color="#ff00ff" id="4" name="objects" offsetx="-81" offsety="0">
   <object id="27" name="savepoint" x="80" y="210" width="40" height="40">
    <properties>
     <property name="text1">* The scent of flowers
@@ -45,7 +45,7 @@ chapter is about to broadcast.</property>
    </properties>
   </object>
  </objectgroup>
- <objectgroup color="#7f00ff" id="5" name="markers">
+ <objectgroup color="#7f00ff" id="5" name="markers" offsetx="-81" offsety="0">
   <object id="20" name="spawn" x="141" y="240.333">
    <point/>
   </object>

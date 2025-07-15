@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="9" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="38">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="11" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="42">
  <editorsettings>
   <export target="room2.lua" format="lua"/>
  </editorsettings>
@@ -13,7 +13,7 @@
  <imagelayer id="8" name="bg" offsetx="-114" offsety="-143" parallaxx="0.8" parallaxy="1.1">
   <image source="../../../assets/sprites/hghuh3.png" trans="cd3257" width="2112" height="528"/>
  </imagelayer>
- <layer id="1" name="tiles" width="39" height="9">
+ <layer id="1" name="tiles" width="39" height="11">
   <data encoding="csv">
 0,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -23,10 +23,12 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="7" name="tiles2" width="39" height="9">
+ <layer id="7" name="tiles2" width="39" height="11">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -36,13 +38,15 @@
 74,75,76,42,42,42,74,74,75,42,74,76,76,42,76,75,74,76,42,42,75,42,42,76,75,74,42,75,76,75,42,76,76,42,75,76,42,43,0,
 48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,49,0,
 48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,49,0,
+48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,49,0,
+48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,49,0,
 53,54,54,54,54,54,54,54,54,54,54,54,54,53,54,54,54,54,54,54,54,54,54,54,54,53,54,54,54,54,54,54,54,54,54,54,54,55,0
 </data>
  </layer>
  <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5">
-  <object id="2" x="0" y="320" width="1520" height="40"/>
+  <object id="2" x="0" y="400" width="1520" height="40"/>
   <object id="7" x="0" y="160" width="1518.71" height="40"/>
-  <object id="12" x="1520" y="200" width="40" height="120.515"/>
+  <object id="12" x="1520" y="200" width="40" height="200"/>
  </objectgroup>
  <objectgroup color="#7f00ff" id="4" name="markers">
   <object id="5" name="spawn" x="40" y="280">
@@ -51,28 +55,28 @@
   <object id="8" name="entry" x="40" y="280">
    <point/>
   </object>
-  <object id="18" name="krisloc" x="657.616" y="220.026">
+  <object id="18" name="krisloc" x="656.949" y="247.359">
    <point/>
   </object>
-  <object id="19" name="susieloc" x="658.36" y="262.428">
+  <object id="19" name="susieloc" x="657.693" y="309.761">
    <point/>
   </object>
-  <object id="20" name="ralseiloc" x="659.104" y="308.551">
+  <object id="20" name="ralseiloc" x="658.437" y="375.884">
    <point/>
   </object>
-  <object id="22" name="cam" x="859.171" y="158.512">
+  <object id="22" name="cam" x="841.838" y="158.512">
    <point/>
   </object>
-  <object id="24" name="krisknockloc" x="556.741" y="234.145">
+  <object id="24" name="krisknockloc" x="556.074" y="261.478">
    <point/>
   </object>
-  <object id="25" name="ralseiknockloc" x="582.481" y="305.003">
+  <object id="25" name="ralseiknockloc" x="581.814" y="372.336">
    <point/>
   </object>
-  <object id="26" name="hittextloc" x="668.031" y="299.052">
+  <object id="26" name="hittextloc" x="667.364" y="366.385">
    <point/>
   </object>
-  <object id="27" name="ralseicrawlloc" x="560.164" y="306.491">
+  <object id="27" name="ralseicrawlloc" x="559.497" y="373.824">
    <point/>
   </object>
   <object id="28" name="ralseihappyplace" x="560.908" y="661.335">
@@ -81,7 +85,16 @@
   <object id="36" name="susierockz" x="642.738" y="662.079">
    <point/>
   </object>
-  <object id="37" name="susieknockloc" x="618.189" y="265.576">
+  <object id="37" name="susieknockloc" x="617.522" y="312.909">
+   <point/>
+  </object>
+  <object id="39" name="tennaknockloc" x="978" y="254.667">
+   <point/>
+  </object>
+  <object id="40" name="tennahappyplace" x="971.333" y="658">
+   <point/>
+  </object>
+  <object id="41" name="tennadownloc" x="976" y="344.667">
    <point/>
   </object>
  </objectgroup>
@@ -131,6 +144,12 @@
    <properties>
     <property name="cutscene" value="room1.fakecactus"/>
    </properties>
+  </object>
+  <object id="38" name="npc" x="873.333" y="257.334">
+   <properties>
+    <property name="actor" value="tenna"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
 </map>

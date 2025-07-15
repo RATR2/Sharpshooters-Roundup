@@ -1,5 +1,4 @@
 return {
-            ---@param cutscene WorldCutscene
     cactus = function(cutscene, event)
         local inspectedCactuses = Game:getFlag("cactuses") or {}
         local cactusFound = false
@@ -39,9 +38,11 @@ return {
                 Assets.playSound("moss_fanfare")
                 cutscene:text("* Congratulations![wait:20]\nyou got nothing...")
                 local kris = cutscene:getCharacter("kris")
+                if kris ~= nil then
                 local krisparty = kris:getPartyMember() or nil
-                if krisparty ~= nil then
-                    krisparty.title = "Cactus Inspector\nInspects all the cactus\non the room randomly."
+                    if krisparty ~= nil then
+                        krisparty.title = "Cactus Inspector\nInspects all the cactus\non the room randomly."
+                    end
                 end
             else
                 cutscene:text("* ...")
@@ -192,6 +193,7 @@ return {
         local kris = cutscene:getCharacter("kris")
         local susie = cutscene:getCharacter("susie")
         local ralsei = cutscene:getCharacter("ralsei")
+        local tenna = cutscene:getCharacter("tenna")
         local cam_x, cam_y = cutscene:getMarker("cam")
 
         cutscene:detachCamera()
@@ -207,23 +209,32 @@ return {
         cutscene:setSpeaker(susie)
         cutscene:text("* Tenna...?", "surprise")
         Assets.playSound("grab")
+        tenna:setSprite("denial_2")
+        tenna:shake(5)
         cutscene:wait(1)
-        cutscene:setSpeaker()
+        cutscene:setSpeaker(tenna)
         cutscene:text("* YOU MUST LEAVE.")
         cutscene:setSpeaker(susie)
         cutscene:text("* What? [wait:1]\n* Tenna come on, lets get you out of here...", "nervous")
         cutscene:setSpeaker(ralsei)
         cutscene:text("* Susie... i dont think that's-[next:true]", "pensive")
-        cutscene:setSpeaker()
+        cutscene:setSpeaker(tenna)
         ralsei:setSprite("battle/hurt_1")
         Assets.playSound("impact")
+        tenna:setSprite("handsup")
         cutscene:text("* NO.[wait:2]\n* IT IS TOO LATE.")
         ralsei:setSprite("walk/right_1")
+        tenna:setAnimation("up")
         cutscene:text("* IT FEEDS ON ATTENTION.[wait:1]\n* AND IT HAS BEEN STARVING.")
         Assets.playSound("hurt")
+        tenna:shake(5)
+        tenna:setAnimation("plead")
         cutscene:text("* FOR A LONG.[wait:10]\n* [sound:hurt]LONG.[wait:10]\n* TI[sound:hurt][next:true]")
         Assets.playSound("grab")
+        tenna:setSprite("plead_1")
         susie:setSprite("shock_right")
+        local tennaknockx, _ = cutscene:getMarker("tennaknockloc")
+        Game.world.timer:tween(1,tenna, {x = tennaknockx },tweentype)
         cutscene:wait(1)
         local waittmr = 0.35
         local detune = 1.2
@@ -247,12 +258,23 @@ return {
             tweentype = tweentype,
             choice = protectedChoice
         }
+        Game.music:play("queen_battle_original")
         if protectedChoice == 4 then
             skillissue(data)
         elseif protectedChoice == 3 then
             selfcare(data)
         end
-        cutscene:wait(0.6)
+        cutscene:wait(cutscene:fadeOut(0.2))
+        local _, tennadownlocy = cutscene:getMarker("tennadownloc")
+        tenna.y = tennadownlocy
+        tenna:setSprite("death")
+        cutscene:wait(cutscene:fadeIn(0.2))
+        cutscene:wait(0.3)
+        tenna:shake(2)
+        cutscene:wait(0.2)
+        local _, tennahappyplacey = cutscene:getMarker("tennahappyplace")
+        Game.world.timer:tween(2,tenna, {y = tennahappyplacey },tweentype)
+        cutscene:wait(0.5)
         cutscene:startEncounter("dummy")
         if protectedChoice == 4 then 
             Game:addPartyMember("ralsei")

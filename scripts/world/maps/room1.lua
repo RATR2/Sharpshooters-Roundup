@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 11,
-  nextobjectid = 100,
+  nextobjectid = 103,
   properties = {
     ["name"] = "??? - Cancelled Chapter"
   },
@@ -96,10 +96,10 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 800,
-          y = 240,
-          width = 247.424,
-          height = 40,
+          x = 841.25,
+          y = 269.75,
+          width = 206.174,
+          height = 3.25,
           rotation = 0,
           visible = true,
           properties = {}
@@ -109,23 +109,10 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 807.424,
+          x = 844.424,
           y = 401.86,
-          width = 240,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 61,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 253.055,
-          y = 25.6494,
-          width = 78,
-          height = 245,
+          width = 196.5,
+          height = 3,
           rotation = 0,
           visible = true,
           properties = {}
@@ -136,35 +123,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 291,
-          y = 157,
-          width = 666,
-          height = 66,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 67,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 760.25,
-          y = 222.5,
-          width = 63.1891,
-          height = 27.0489,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 68,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 777.906,
-          y = 441.18,
-          width = 28.125,
-          height = 75.125,
+          y = 218.5,
+          width = 466.5,
+          height = 4.5,
           rotation = 0,
           visible = true,
           properties = {}
@@ -176,7 +137,7 @@ return {
           shape = "rectangle",
           x = 120.555,
           y = 503.11,
-          width = 661.75,
+          width = 677.25,
           height = 14.25,
           rotation = 0,
           visible = true,
@@ -188,22 +149,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 111.256,
-          y = 17.3445,
+          y = 393.344,
           width = 8,
-          height = 487.375,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 72,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 114.38,
-          y = 19.7819,
-          width = 126.909,
-          height = 21.8182,
+          height = 111.375,
           rotation = 0,
           visible = true,
           properties = {}
@@ -228,21 +176,55 @@ return {
           properties = {}
         },
         {
-          id = 96,
+          id = 100,
           name = "",
           type = "",
-          shape = "polygon",
-          x = 920,
-          y = 240,
+          shape = "polyline",
+          x = 264.5,
+          y = 264.75,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
-          polygon = {
+          polyline = {
             { x = 0, y = 0 },
-            { x = 0, y = -17 },
-            { x = -104, y = -17 },
-            { x = -103.625, y = 0.25 }
+            { x = 0, y = -41.5 },
+            { x = 26.5, y = -41.75 }
+          },
+          properties = {}
+        },
+        {
+          id = 101,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 758.5,
+          y = 223.5,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 82.75, y = 49.75 }
+          },
+          properties = {}
+        },
+        {
+          id = 102,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 797,
+          y = 516.5,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0.5, y = -13.75 },
+            { x = 7, y = -72 },
+            { x = 47.5, y = -114.75 }
           },
           properties = {}
         }

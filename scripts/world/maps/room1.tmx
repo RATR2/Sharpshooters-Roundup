@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="100">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="103">
  <editorsettings>
   <export target="room1.lua" format="lua"/>
  </editorsettings>
@@ -18,20 +18,22 @@
   <image source="../../../assets/sprites/bg2.png" width="880" height="660"/>
  </imagelayer>
  <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5" offsetx="-81" offsety="0">
-  <object id="3" x="800" y="240" width="247.424" height="40"/>
-  <object id="5" x="807.424" y="401.86" width="240" height="40"/>
-  <object id="61" x="253.055" y="25.6494" width="78" height="245"/>
-  <object id="65" x="291" y="157" width="666" height="66"/>
-  <object id="67" x="760.25" y="222.5" width="63.1891" height="27.0489"/>
-  <object id="68" x="777.906" y="441.18" width="28.125" height="75.125"/>
-  <object id="70" x="120.555" y="503.11" width="661.75" height="14.25"/>
-  <object id="71" x="111.256" y="17.3445" width="8" height="487.375"/>
-  <object id="72" x="114.38" y="19.7819" width="126.909" height="21.8182"/>
+  <object id="3" x="841.25" y="269.75" width="206.174" height="3.25"/>
+  <object id="5" x="844.424" y="401.86" width="196.5" height="3"/>
+  <object id="65" x="291" y="218.5" width="466.5" height="4.5"/>
+  <object id="70" x="120.555" y="503.11" width="677.25" height="14.25"/>
+  <object id="71" x="111.256" y="393.344" width="8" height="111.375"/>
   <object id="95" x="117.369" y="388.237">
    <polygon points="0,0 138.276,-124.097 146.836,-123.426 0,7.37875"/>
   </object>
-  <object id="96" x="920" y="240">
-   <polygon points="0,0 0,-17 -104,-17 -103.625,0.25"/>
+  <object id="100" x="264.5" y="264.75">
+   <polyline points="0,0 0,-41.5 26.5,-41.75"/>
+  </object>
+  <object id="101" x="758.5" y="223.5">
+   <polyline points="0,0 82.75,49.75"/>
+  </object>
+  <object id="102" x="797" y="516.5">
+   <polyline points="0.5,-13.75 7,-72 47.5,-114.75"/>
   </object>
  </objectgroup>
  <objectgroup color="#ff00ff" id="4" name="objects" offsetx="-81" offsety="0">

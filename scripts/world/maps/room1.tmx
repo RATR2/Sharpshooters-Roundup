@@ -8,11 +8,8 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/castle.tsx"/>
  <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>
- <imagelayer id="9" name="bg3" offsetx="-1589.26" offsety="-855.597">
-  <image source="../../../assets/sprites/bg3.png" width="3520" height="2640"/>
- </imagelayer>
- <imagelayer id="10" name="bg" offsetx="61" offsety="-113">
-  <image source="../../../assets/sprites/bg.png" width="880" height="660"/>
+ <imagelayer id="10" name="bg" offsetx="35" offsety="-111">
+  <image source="../../../assets/sprites/bg4.png" width="880" height="660"/>
  </imagelayer>
  <imagelayer id="8" name="bg2" offsetx="34.7388" offsety="-115.597">
   <image source="../../../assets/sprites/bg2.png" width="880" height="660"/>

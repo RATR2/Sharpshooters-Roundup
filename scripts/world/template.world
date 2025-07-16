@@ -2,10 +2,10 @@
     "maps": [
         {
             "fileName": "maps/room1.tmx",
-            "height": 960,
-            "width": 800,
-            "x": 0,
-            "y": 0
+            "height": 560,
+            "width": 1000,
+            "x": -240,
+            "y": -80
         },
         {
             "fileName": "maps/room2.tmx",

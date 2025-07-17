@@ -9,8 +9,8 @@ return {
   height = 11,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 17,
-  nextobjectid = 42,
+  nextlayerid = 19,
+  nextobjectid = 44,
   properties = {
     ["name"] = "Test Map - Room 2"
   },
@@ -66,6 +66,22 @@ return {
       parallaxx = 0.8,
       parallaxy = 1.1,
       repeatx = false,
+      repeaty = false,
+      properties = {}
+    },
+    {
+      type = "imagelayer",
+      image = "../../../assets/sprites/waow5.png",
+      id = 18,
+      name = "Flowers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 385.333,
+      offsety = -138.667,
+      parallaxx = 1,
+      parallaxy = 1,
+      repeatx = true,
       repeaty = false,
       properties = {}
     },
@@ -573,6 +589,22 @@ return {
           visible = true,
           properties = {
             ["actor"] = "tenna"
+          }
+        },
+        {
+          id = 42,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1479.67,
+          y = 199.667,
+          width = 40,
+          height = 201.667,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "room3",
+            ["marker"] = "entry"
           }
         }
       }

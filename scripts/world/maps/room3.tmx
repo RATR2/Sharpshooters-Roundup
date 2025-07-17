@@ -4,7 +4,7 @@
   <export target="room1.lua" format="lua"/>
  </editorsettings>
  <properties>
-  <property name="name" value="??? - Cancelled Chapter"/>
+  <property name="name" value=""/>
  </properties>
  <tileset firstgid="1" source="../tilesets/castle.tsx"/>
  <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>

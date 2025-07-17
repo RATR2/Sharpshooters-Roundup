@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="11" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="43">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="11" tilewidth="40" tileheight="40" infinite="0" nextlayerid="19" nextobjectid="44">
  <editorsettings>
   <export target="room2.lua" format="lua"/>
  </editorsettings>
@@ -12,6 +12,9 @@
  <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>
  <imagelayer id="8" name="bg" offsetx="-114" offsety="-143" parallaxx="0.8" parallaxy="1.1">
   <image source="../../../assets/sprites/hghuh3.png" trans="cd3257" width="2112" height="528"/>
+ </imagelayer>
+ <imagelayer id="18" name="Flowers" offsetx="385.333" offsety="-138.667" repeatx="1">
+  <image source="../../../assets/sprites/waow5.png" width="880" height="660"/>
  </imagelayer>
  <layer id="1" name="tiles" width="39" height="11">
   <data encoding="csv">

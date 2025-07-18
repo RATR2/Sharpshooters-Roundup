@@ -237,7 +237,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["cutscene"] = "room1.encounter"
+            ["cutscene"] = "room2.encounter"
           }
         },
         {
@@ -577,7 +577,7 @@ return {
         },
         {
           id = 40,
-          name = "tennahappyplace",
+          name = "ITSTVTIMEOUT",
           type = "",
           shape = "point",
           x = 971.333,

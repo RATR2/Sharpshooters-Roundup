@@ -61,7 +61,7 @@
   </object>
   <object id="17" name="script" x="600" y="200" width="37.402" height="200">
    <properties>
-    <property name="cutscene" value="room1.encounter"/>
+    <property name="cutscene" value="room2.encounter"/>
    </properties>
   </object>
   <object id="29" name="cactus2" x="0" y="160" width="80" height="40"/>
@@ -133,7 +133,7 @@
   <object id="39" name="tennaknockloc" x="978" y="254.667">
    <point/>
   </object>
-  <object id="40" name="tennahappyplace" x="971.333" y="658">
+  <object id="40" name="ITSTVTIMEOUT" x="971.333" y="658">
    <point/>
   </object>
   <object id="41" name="tennadownloc" x="976" y="344.667">

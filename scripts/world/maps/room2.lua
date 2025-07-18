@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 18,
-  nextobjectid = 45,
+  nextlayerid = 17,
+  nextobjectid = 42,
   properties = {
     ["music"] = "western_winds",
     ["name"] = "Test Map - Room 2"
@@ -72,6 +72,22 @@ return {
       parallaxx = 0.8,
       parallaxy = 1.1,
       repeatx = false,
+      repeaty = false,
+      properties = {}
+    },
+    {
+      type = "imagelayer",
+      image = "../../../assets/sprites/waow5.png",
+      id = 18,
+      name = "Flowers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 385.333,
+      offsety = -138.667,
+      parallaxx = 1,
+      parallaxy = 1,
+      repeatx = true,
       repeaty = false,
       properties = {}
     },
@@ -586,6 +602,173 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "objects",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 9,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = -40,
+          y = 200,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "room1",
+            ["marker"] = "entry"
+          }
+        },
+        {
+          id = 17,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 200,
+          width = 37.402,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.encounter"
+          }
+        },
+        {
+          id = 29,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 160,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 30,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 160,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 31,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 369.236,
+          y = 157.05,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 32,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 160,
+          width = 200,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 33,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 1120,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 34,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 1200,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.cactus2"
+          }
+        },
+        {
+          id = 35,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 1160,
+          y = 160,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.fakecactus"
+          }
+        },
+        {
+          id = 38,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 873.333,
+          y = 257.334,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "tenna"
+          }
         }
       }
     }

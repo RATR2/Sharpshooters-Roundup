@@ -5,6 +5,7 @@
  </editorsettings>
  <properties>
   <property name="music" value=""/>
+  <property name="name" value=""/>
  </properties>
  <imagelayer id="2" name="bg" offsetx="34.74" offsety="-115.6">
   <image source="../../../assets/sprites/afterbattle.png" width="880" height="660"/>

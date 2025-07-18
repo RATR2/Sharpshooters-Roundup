@@ -15,7 +15,10 @@
  <imagelayer id="8" name="bg2" offsetx="-114" offsety="-143" parallaxx="0.8" parallaxy="1.1">
   <image source="../../../assets/sprites/battlebg.png" trans="cd3257" width="2112" height="528"/>
  </imagelayer>
- <layer id="7" name="tiles" width="39" height="12">
+ <imagelayer id="18" name="Flowers" offsetx="385.333" offsety="-138.667" repeatx="1">
+  <image source="../../../assets/sprites/waow5.png" width="880" height="660"/>
+ </imagelayer>
+ <layer id="1" name="tiles" width="39" height="11">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

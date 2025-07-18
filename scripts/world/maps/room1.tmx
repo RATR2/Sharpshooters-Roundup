@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="12">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="23" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="12">
  <editorsettings>
   <export target="room1.lua" format="lua"/>
  </editorsettings>
@@ -10,11 +10,11 @@
  <imagelayer id="4" name="metalbars" parallaxx="0.8">
   <image source="../../../assets/sprites/metalbars.png" width="1087" height="660"/>
  </imagelayer>
- <imagelayer id="2" name="bg" offsetx="34.74" offsety="-115.6">
+ <imagelayer id="2" name="bg" offsetx="40.74" offsety="-99.6">
   <image source="../../../assets/sprites/beforebattle.png" width="880" height="660"/>
  </imagelayer>
  <objectgroup color="#0000ff" id="3" name="collision">
-  <object id="3" x="914" y="403">
+  <object id="3" x="919" y="419">
    <polyline points="0,0 -151,-2 -191,36 -198,105 -879,108 -879,-23 -740,-139 -739,-182 -252,-189 -153,-131 0,-130"/>
   </object>
  </objectgroup>
@@ -22,13 +22,13 @@
   <object id="4" name="fakecactus" x="320" y="440" width="40" height="40"/>
   <object id="5" name="cactus" x="400" y="440" width="40" height="40"/>
   <object id="6" name="cactus2" x="480" y="440" width="40" height="40"/>
-  <object id="10" name="transition" x="920" y="280" width="40" height="120">
+  <object id="10" name="transition" x="878" y="291" width="40" height="120">
    <properties>
     <property name="map" value="room2"/>
     <property name="marker" value="entry"/>
    </properties>
   </object>
-  <object id="11" name="savepoint" x="380" y="307" width="40" height="40">
+  <object id="11" name="savepoint" x="402" y="321" width="40" height="40">
    <properties>
     <property name="text1">* The scent of flowers
 is stronger here...</property>
@@ -38,10 +38,10 @@ chapter is about to broadcast.</property>
   </object>
  </objectgroup>
  <objectgroup color="#7f00ff" id="6" name="markers">
-  <object id="8" name="spawn" x="469" y="342">
+  <object id="8" name="spawn" x="170" y="348">
    <point/>
   </object>
-  <object id="9" name="entry" x="859" y="338">
+  <object id="9" name="entry" x="843" y="369">
    <point/>
   </object>
  </objectgroup>

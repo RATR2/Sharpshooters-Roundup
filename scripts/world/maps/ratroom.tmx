@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="106">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="107">
  <editorsettings>
   <export target="room1.lua" format="lua"/>
  </editorsettings>
@@ -9,7 +9,7 @@
  <tileset firstgid="1" source="../tilesets/castle.tsx"/>
  <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>
  <imagelayer id="8" name="bg2" offsetx="34.7388" offsety="-115.597">
-  <image source="../../../assets/sprites/bg2.png" width="880" height="660"/>
+  <image source="../../../assets/sprites/bg2.png"/>
  </imagelayer>
  <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5" offsetx="-81" offsety="0">
   <object id="65" x="291" y="218.5" width="466.5" height="4.5"/>
@@ -33,11 +33,14 @@
  </objectgroup>
  <objectgroup color="#ff00ff" id="4" name="objects" offsetx="-81" offsety="0"/>
  <objectgroup color="#7f00ff" id="5" name="markers" offsetx="-81" offsety="0">
-  <object id="20" name="spawn" x="489.198" y="340.141">
+  <object id="20" name="spawn" x="509.198" y="339.808">
    <point/>
   </object>
   <object id="105" name="entry" x="489" y="340">
    <point/>
+  </object>
+  <object id="106" name="Note: This is a future easteregg" x="2" y="-61">
+   <polygon points="0,0 26,21 -14,25"/>
   </object>
  </objectgroup>
 </map>

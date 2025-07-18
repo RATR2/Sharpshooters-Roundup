@@ -1,90 +1,4 @@
 return {
-    cactus = function(cutscene, event)
-        local inspectedCactuses = Game:getFlag("cactuses") or {}
-        local cactusFound = false
-        for i,cactus in ipairs(inspectedCactuses) do
-            if event.data.properties.cactusID == cactus then
-                cactusFound = true
-            end
-        end
-        if not cactusFound then
-            table.insert(inspectedCactuses,event.data.properties.cactusID)
-        end
-        local cactusinspects = Game:getFlag("cactusinspects") or 0
-        local inspects = #inspectedCactuses
-        print(inspects)
-        if inspects <= 2 then
-            cutscene:text("* Just a cactus.")
-        elseif inspects >= 3 and inspects < 6 then
-            cutscene:text("* A cactus...")
-        elseif inspects == 6 then
-            cutscene:text("* Is it really a cactus?")
-        elseif inspects >= 7 and inspects < 10 then
-            cutscene:text("* Just[wait:2] a cactus...")
-        elseif inspects >= 10 and inspects < 14 then
-            cutscene:text("* Cactus...")
-        elseif inspects == 14 then
-            if cactusinspects == 0 then
-                cutscene:text("* ?!![wait:5] There are $150 Dark Dollars in here...[wait:4]\n* What is this?")
-                Assets.playSound("item")
-                cutscene:text("(50 Dark Dollars was added to your Money Hole.)")
-                Game.money = Game.money + 150
-            elseif cactusinspects == 1 then
-                cutscene:text("* Suprisingly,[wait:4] there was 50 Dark Dollars on this cactus...")
-                Assets.playSound("item")
-                cutscene:text("(50 Dark Dollars was added to your Money Hole.)")
-                Game.money = Game.money + 50
-            elseif cactusinspects == 2 then
-                Assets.playSound("moss_fanfare")
-                cutscene:text("* Congratulations![wait:20]\nyou got nothing...")
-                local kris = cutscene:getCharacter("kris")
-                if kris ~= nil then
-                local krisparty = kris:getPartyMember() or nil
-                    if krisparty ~= nil then
-                        krisparty.title = "Cactus Inspector\nInspects all the cactus\non the room randomly."
-                    end
-                end
-            else
-                cutscene:text("* ...")
-            end
-
-            inspectedCactuses = {}
-            Game:setFlag("cactusinspects", cactusinspects + 1)
-        end
-        --cutscene:text("* Actually this seems to be\ncactus "..(event.data.properties.cactusID or -1)..".")
-        Game:setFlag("cactuses", inspectedCactuses)
-    end,
-
-    cactus2 = function(cutscene, event)
-        local cactusinspects = Game:getFlag("cactusinspects") or 0
-        if cactusinspects >= 2 then
-            local warned = Game:getFlag("cactuswarned") or false
-            if not warned then
-                cutscene:text("* We are[wait:5] NOT[wait:8] doing this again.")
-                Game:setFlag("cactuswarned",true)
-            else
-                cutscene:text("* A cactus.")
-            end
-        else
-            cutscene:text("* A cactus.")
-        end
-    end,
-
-    fakecactus = function(cutscene, event)
-        local cactusinspects = Game:getFlag("cactusinspects") or 0
-        if cactusinspects == 0 then
-            cutscene:text("* A cactus.")
-        elseif cactusinspects == 1 then
-            cutscene:text("* Something feels weird about this one...")
-            cutscene:text("* You just don't quite know what is it...")
-        elseif cactusinspects == 2 then
-            cutscene:text("* ...?")
-            cutscene:text("* This is actually a cardboard\nreplica of a cactus...[wait:1]\n* What is this?!")
-        elseif cactusinspects >= 3 then
-            cutscene:text("* A cardboard replica of a cactus.")
-        end
-    end,
-
     encounter = function(cutscene, event)
         local function afterAttack(kris, susie, ralsei, tweentype, choice)
             local newkris_x, _ = cutscene:getMarker("krisknockloc")
@@ -235,6 +149,7 @@ return {
         susie:setSprite("shock_right")
         local tennaknockx, _ = cutscene:getMarker("tennaknockloc")
         Game.world.timer:tween(1,tenna, {x = tennaknockx },tweentype)
+        Game.world.music:stop()
         cutscene:wait(1)
         local waittmr = 0.35
         local detune = 1.2
@@ -258,12 +173,17 @@ return {
             tweentype = tweentype,
             choice = protectedChoice
         }
-        Game.music:play("queen_battle_original")
+        Game.music:setLooping(false)
+        Game.music:play("renewal")
+        local msobject = MusicWaiter()
+        Game.world:addChild(msobject)
+        msobject:setLenght(40)
         if protectedChoice == 4 then
             skillissue(data)
         elseif protectedChoice == 3 then
             selfcare(data)
         end
+        cutscene:wait(msobject:getTime()/2)
         cutscene:wait(cutscene:fadeOut(0.2))
         local _, tennadownlocy = cutscene:getMarker("tennadownloc")
         tenna.y = tennadownlocy
@@ -272,6 +192,9 @@ return {
         cutscene:wait(0.3)
         tenna:shake(2)
         cutscene:wait(0.2)
+        --print(msobject:getTime() or "not how this works") 
+        cutscene:wait(msobject:getTime())
+        msobject:remove()
         local _, tennahappyplacey = cutscene:getMarker("tennahappyplace")
         Game.world.timer:tween(2,tenna, {y = tennahappyplacey },tweentype)
         cutscene:wait(0.5)

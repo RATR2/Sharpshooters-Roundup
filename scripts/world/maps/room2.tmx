@@ -1,58 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="11" tilewidth="40" tileheight="40" infinite="0" nextlayerid="17" nextobjectid="43">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="39" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="18" nextobjectid="45">
  <editorsettings>
   <export target="room2.lua" format="lua"/>
  </editorsettings>
  <properties>
+  <property name="music" value="western_winds"/>
   <property name="name" value="Test Map - Room 2"/>
  </properties>
  <tileset firstgid="1" name="castle" tilewidth="40" tileheight="40" tilecount="40" columns="4">
   <image source="../../../assets/sprites/tilesets/castle.png" width="160" height="400"/>
  </tileset>
  <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>
- <imagelayer id="8" name="bg" offsetx="-114" offsety="-143" parallaxx="0.8" parallaxy="1.1">
-  <image source="../../../assets/sprites/hghuh3.png" trans="cd3257" width="2112" height="528"/>
+ <tileset firstgid="77" source="../tilesets/height.tsx"/>
+ <imagelayer id="8" name="bg2" offsetx="-114" offsety="-143" parallaxx="0.8" parallaxy="1.1">
+  <image source="../../../assets/sprites/battlebg.png" trans="cd3257" width="2112" height="528"/>
  </imagelayer>
- <layer id="1" name="tiles" width="39" height="11">
-  <data encoding="csv">
-0,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
- <layer id="7" name="tiles2" width="39" height="11">
+ <layer id="7" name="tiles" width="39" height="12">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 2147483705,0,0,0,0,0,0,0,0,0,57,0,0,0,0,57,0,0,0,0,0,0,0,0,0,0,0,0,0,57,0,0,0,0,0,0,0,0,0,
 2147483711,2147483710,0,0,2147483710,2147483712,62,0,0,64,63,2147483710,0,0,62,63,2147483710,64,62,0,0,0,0,0,0,0,0,0,62,63,2147483710,0,0,0,0,0,0,0,0,
 2147483717,2147483716,0,0,2147483716,2147483718,68,0,0,70,69,2147483716,0,0,68,69,2147483716,70,68,0,0,0,0,0,0,0,0,0,68,69,2147483716,0,0,0,0,0,0,0,0,
-74,75,76,42,42,42,74,74,75,42,74,76,76,42,76,75,74,76,42,42,75,42,42,76,75,74,42,75,76,75,42,76,76,42,75,76,42,43,0,
-48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,49,0,
-48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,49,0,
-48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,49,0,
-48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,49,0,
-53,54,54,54,54,54,54,54,54,54,54,54,54,53,54,54,54,54,54,54,54,54,54,54,54,53,54,54,54,54,54,54,54,54,54,54,54,55,0
+74,75,76,42,42,42,74,74,75,42,74,76,76,42,76,75,74,76,42,42,75,42,42,76,75,74,42,75,76,75,42,76,76,42,75,76,42,42,0,
+48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,0,
+48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,0,
+48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,0,
+48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,0,
+53,54,54,54,54,54,54,54,54,54,54,54,54,53,54,54,54,54,54,54,54,54,54,54,54,53,54,54,54,54,54,54,54,54,54,54,54,55,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="17" name="tiles2" width="39" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,
+77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,
+77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,
+77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,
+77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,77,
+78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,
+78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78,78
 </data>
  </layer>
  <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5">
   <object id="2" x="0" y="400" width="1520" height="40"/>
   <object id="7" x="0" y="160" width="1518.71" height="40"/>
-  <object id="12" x="1520" y="200" width="40" height="200"/>
  </objectgroup>
- <objectgroup color="#7f00ff" id="4" name="markers">
-  <object id="5" name="spawn" x="40" y="280">
+ <objectgroup color="#ff00ff" id="5" name="objects">
+  <object id="9" name="transition" x="-40" y="200" width="40" height="200">
+   <properties>
+    <property name="map" value="room1"/>
+    <property name="marker" value="entry"/>
+   </properties>
+  </object>
+  <object id="17" name="script" x="600" y="200" width="37.402" height="200">
+   <properties>
+    <property name="cutscene" value="room1.encounter"/>
+   </properties>
+  </object>
+  <object id="29" name="cactus2" x="0" y="160" width="80" height="40"/>
+  <object id="30" name="cactus2" x="160" y="160" width="120" height="40"/>
+  <object id="31" name="cactus2" x="369.236" y="157.05" width="120" height="40"/>
+  <object id="32" name="cactus2" x="560" y="160" width="200" height="40"/>
+  <object id="33" name="cactus2" x="1123" y="160.5" width="15" height="40"/>
+  <object id="34" name="cactus2" x="1222" y="159.5" width="16.5" height="40"/>
+  <object id="35" name="fakecactus" x="1178" y="160" width="7.5" height="40"/>
+  <object id="38" name="npc" x="873.333" y="257.334">
+   <properties>
+    <property name="actor" value="tenna"/>
+   </properties>
    <point/>
   </object>
-  <object id="8" name="entry" x="40" y="280">
+  <object id="42" name="transition" x="1520" y="200" width="40" height="201.667">
+   <properties>
+    <property name="map" value="room3"/>
+    <property name="marker" value="entry"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#7f00ff" id="4" name="markers">
+  <properties>
+   <property name="music" value="western_winds"/>
+  </properties>
+  <object id="5" name="spawn" x="360" y="320">
+   <point/>
+  </object>
+  <object id="8" name="entry" x="40" y="320">
+   <point/>
+  </object>
+  <object id="44" name="entry2" x="1480" y="320">
    <point/>
   </object>
   <object id="18" name="krisloc" x="656.949" y="247.359">
@@ -96,66 +137,6 @@
   </object>
   <object id="41" name="tennadownloc" x="976" y="344.667">
    <point/>
-  </object>
- </objectgroup>
- <objectgroup color="#ff00ff" id="5" name="objects">
-  <object id="9" name="transition" x="-40" y="200" width="40" height="120">
-   <properties>
-    <property name="map" value="room1"/>
-    <property name="marker" value="entry"/>
-   </properties>
-  </object>
-  <object id="17" name="script" x="600" y="200" width="37.402" height="120">
-   <properties>
-    <property name="cutscene" value="room1.encounter"/>
-   </properties>
-  </object>
-  <object id="29" name="interactable" x="0" y="160" width="80" height="40">
-   <properties>
-    <property name="cutscene" value="room1.cactus2"/>
-   </properties>
-  </object>
-  <object id="30" name="interactable" x="160" y="160" width="120" height="40">
-   <properties>
-    <property name="cutscene" value="room1.cactus2"/>
-   </properties>
-  </object>
-  <object id="31" name="interactable" x="369.236" y="157.05" width="120" height="40">
-   <properties>
-    <property name="cutscene" value="room1.cactus2"/>
-   </properties>
-  </object>
-  <object id="32" name="interactable" x="560" y="160" width="200" height="40">
-   <properties>
-    <property name="cutscene" value="room1.cactus2"/>
-   </properties>
-  </object>
-  <object id="33" name="interactable" x="1120" y="160" width="40" height="40">
-   <properties>
-    <property name="cutscene" value="room1.cactus2"/>
-   </properties>
-  </object>
-  <object id="34" name="interactable" x="1200" y="160" width="40" height="40">
-   <properties>
-    <property name="cutscene" value="room1.cactus2"/>
-   </properties>
-  </object>
-  <object id="35" name="interactable" x="1160" y="160" width="40" height="40">
-   <properties>
-    <property name="cutscene" value="room1.fakecactus"/>
-   </properties>
-  </object>
-  <object id="38" name="npc" x="873.333" y="257.334">
-   <properties>
-    <property name="actor" value="tenna"/>
-   </properties>
-   <point/>
-  </object>
-  <object id="42" name="transition" x="1479.67" y="199.667" width="40" height="201.667">
-   <properties>
-    <property name="map" value="room3"/>
-    <property name="marker" value="entry"/>
-   </properties>
   </object>
  </objectgroup>
 </map>

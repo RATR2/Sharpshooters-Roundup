@@ -6,12 +6,13 @@ return {
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 39,
-  height = 11,
+  height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 17,
-  nextobjectid = 42,
+  nextlayerid = 18,
+  nextobjectid = 45,
   properties = {
+    ["music"] = "western_winds",
     ["name"] = "Test Map - Room 2"
   },
   tilesets = {
@@ -49,15 +50,20 @@ return {
       firstgid = 41,
       filename = "../tilesets/tilesetfight.tsx",
       exportfilename = "../tilesets/tilesetfight.lua"
+    },
+    {
+      name = "height",
+      firstgid = 77,
+      filename = "../tilesets/height.tsx"
     }
   },
   layers = {
     {
       type = "imagelayer",
-      image = "../../../assets/sprites/hghuh3.png",
+      image = "../../../assets/sprites/battlebg.png",
       transparentcolor = "#cd3257",
       id = 8,
-      name = "bg",
+      name = "bg2",
       class = "",
       visible = true,
       opacity = 1,
@@ -74,40 +80,9 @@ return {
       x = 0,
       y = 0,
       width = 39,
-      height = 11,
-      id = 1,
-      name = "tiles",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      encoding = "lua",
-      data = {
-        0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-      }
-    },
-    {
-      type = "tilelayer",
-      x = 0,
-      y = 0,
-      width = 39,
-      height = 11,
+      height = 12,
       id = 7,
-      name = "tiles2",
+      name = "tiles",
       class = "",
       visible = true,
       opacity = 1,
@@ -123,12 +98,45 @@ return {
         2147483705, 0, 0, 0, 0, 0, 0, 0, 0, 0, 57, 0, 0, 0, 0, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         2147483711, 2147483710, 0, 0, 2147483710, 2147483712, 62, 0, 0, 64, 63, 2147483710, 0, 0, 62, 63, 2147483710, 64, 62, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 63, 2147483710, 0, 0, 0, 0, 0, 0, 0, 0,
         2147483717, 2147483716, 0, 0, 2147483716, 2147483718, 68, 0, 0, 70, 69, 2147483716, 0, 0, 68, 69, 2147483716, 70, 68, 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 69, 2147483716, 0, 0, 0, 0, 0, 0, 0, 0,
-        74, 75, 76, 42, 42, 42, 74, 74, 75, 42, 74, 76, 76, 42, 76, 75, 74, 76, 42, 42, 75, 42, 42, 76, 75, 74, 42, 75, 76, 75, 42, 76, 76, 42, 75, 76, 42, 43, 0,
-        48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 49, 0,
-        48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 49, 0,
-        48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 49, 0,
-        48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 49, 0,
-        53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 55, 0
+        74, 75, 76, 42, 42, 42, 74, 74, 75, 42, 74, 76, 76, 42, 76, 75, 74, 76, 42, 42, 75, 42, 42, 76, 75, 74, 42, 75, 76, 75, 42, 76, 76, 42, 75, 76, 42, 42, 0,
+        48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 0,
+        48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 0,
+        48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 0,
+        48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 0,
+        53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 53, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 54, 55, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 39,
+      height = 12,
+      id = 17,
+      name = "tiles2",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77,
+        77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77,
+        77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77,
+        77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77,
+        77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77,
+        78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78,
+        78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78
       }
     },
     {
@@ -170,19 +178,175 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        },
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 5,
+      name = "objects",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
         {
-          id = 12,
-          name = "",
+          id = 9,
+          name = "transition",
           type = "",
           shape = "rectangle",
-          x = 1520,
+          x = -40,
           y = 200,
           width = 40,
           height = 200,
           rotation = 0,
           visible = true,
+          properties = {
+            ["map"] = "room1",
+            ["marker"] = "entry"
+          }
+        },
+        {
+          id = 17,
+          name = "script",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 200,
+          width = 37.402,
+          height = 200,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "room1.encounter"
+          }
+        },
+        {
+          id = 29,
+          name = "cactus2",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 160,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
           properties = {}
+        },
+        {
+          id = 30,
+          name = "cactus2",
+          type = "",
+          shape = "rectangle",
+          x = 160,
+          y = 160,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 31,
+          name = "cactus2",
+          type = "",
+          shape = "rectangle",
+          x = 369.236,
+          y = 157.05,
+          width = 120,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 32,
+          name = "cactus2",
+          type = "",
+          shape = "rectangle",
+          x = 560,
+          y = 160,
+          width = 200,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 33,
+          name = "cactus2",
+          type = "",
+          shape = "rectangle",
+          x = 1123,
+          y = 160.5,
+          width = 15,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 34,
+          name = "cactus2",
+          type = "",
+          shape = "rectangle",
+          x = 1222,
+          y = 159.5,
+          width = 16.5,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 35,
+          name = "fakecactus",
+          type = "",
+          shape = "rectangle",
+          x = 1178,
+          y = 160,
+          width = 7.5,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 38,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 873.333,
+          y = 257.334,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "tenna"
+          }
+        },
+        {
+          id = 42,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1520,
+          y = 200,
+          width = 40,
+          height = 201.667,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "room3",
+            ["marker"] = "entry"
+          }
         }
       }
     },
@@ -198,15 +362,17 @@ return {
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
-      properties = {},
+      properties = {
+        ["music"] = "western_winds"
+      },
       objects = {
         {
           id = 5,
           name = "spawn",
           type = "",
           shape = "point",
-          x = 40,
-          y = 280,
+          x = 360,
+          y = 320,
           width = 0,
           height = 0,
           rotation = 0,
@@ -219,7 +385,20 @@ return {
           type = "",
           shape = "point",
           x = 40,
-          y = 280,
+          y = 320,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 44,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 1480,
+          y = 320,
           width = 0,
           height = 0,
           rotation = 0,
@@ -407,173 +586,6 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 5,
-      name = "objects",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 0,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
-        {
-          id = 9,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = -40,
-          y = 200,
-          width = 40,
-          height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "room1",
-            ["marker"] = "entry"
-          }
-        },
-        {
-          id = 17,
-          name = "script",
-          type = "",
-          shape = "rectangle",
-          x = 600,
-          y = 200,
-          width = 37.402,
-          height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "room1.encounter"
-          }
-        },
-        {
-          id = 29,
-          name = "interactable",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 160,
-          width = 80,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "room1.cactus2"
-          }
-        },
-        {
-          id = 30,
-          name = "interactable",
-          type = "",
-          shape = "rectangle",
-          x = 160,
-          y = 160,
-          width = 120,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "room1.cactus2"
-          }
-        },
-        {
-          id = 31,
-          name = "interactable",
-          type = "",
-          shape = "rectangle",
-          x = 369.236,
-          y = 157.05,
-          width = 120,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "room1.cactus2"
-          }
-        },
-        {
-          id = 32,
-          name = "interactable",
-          type = "",
-          shape = "rectangle",
-          x = 560,
-          y = 160,
-          width = 200,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "room1.cactus2"
-          }
-        },
-        {
-          id = 33,
-          name = "interactable",
-          type = "",
-          shape = "rectangle",
-          x = 1120,
-          y = 160,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "room1.cactus2"
-          }
-        },
-        {
-          id = 34,
-          name = "interactable",
-          type = "",
-          shape = "rectangle",
-          x = 1200,
-          y = 160,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "room1.cactus2"
-          }
-        },
-        {
-          id = 35,
-          name = "interactable",
-          type = "",
-          shape = "rectangle",
-          x = 1160,
-          y = 160,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "room1.fakecactus"
-          }
-        },
-        {
-          id = 38,
-          name = "npc",
-          type = "",
-          shape = "point",
-          x = 873.333,
-          y = 257.334,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["actor"] = "tenna"
-          }
         }
       }
     }

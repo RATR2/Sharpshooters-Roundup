@@ -1,54 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="11" nextobjectid="103">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="9">
  <editorsettings>
-  <export target="room1.lua" format="lua"/>
+  <export target="room3.lua" format="lua"/>
  </editorsettings>
  <properties>
-  <property name="name" value="??? - Cancelled Chapter"/>
+  <property name="music" value=""/>
  </properties>
- <tileset firstgid="1" source="../tilesets/castle.tsx"/>
- <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>
- <imagelayer id="8" name="bg2" offsetx="34.7388" offsety="-115.597">
-  <image source="../../../assets/sprites/bg2.png" width="880" height="660"/>
+ <imagelayer id="2" name="bg" offsetx="34.74" offsety="-115.6">
+  <image source="../../../assets/sprites/afterbattle.png" width="880" height="660"/>
  </imagelayer>
- <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5" offsetx="-81" offsety="0">
-  <object id="3" x="841.25" y="269.75" width="206.174" height="3.25"/>
-  <object id="5" x="844.424" y="401.86" width="196.5" height="3"/>
-  <object id="65" x="291" y="218.5" width="466.5" height="4.5"/>
-  <object id="70" x="120.555" y="503.11" width="677.25" height="14.25"/>
-  <object id="71" x="111.256" y="393.344" width="8" height="111.375"/>
-  <object id="95" x="117.369" y="388.237">
-   <polygon points="0,0 138.276,-124.097 146.836,-123.426 0,7.37875"/>
-  </object>
-  <object id="100" x="264.5" y="264.75">
-   <polyline points="0,0 0,-41.5 26.5,-41.75"/>
-  </object>
-  <object id="101" x="758.5" y="223.5">
-   <polyline points="0,0 82.75,49.75"/>
-  </object>
-  <object id="102" x="797" y="516.5">
-   <polyline points="0.5,-13.75 7,-72 47.5,-114.75"/>
+ <objectgroup color="#0000ff" id="3" name="collision">
+  <object id="1" x="37" y="272">
+   <polyline points="0,0 152,2 250,-57 735,-54 736,-12 878,112 878,237 200,240 188,170 149,128 -2,127"/>
   </object>
  </objectgroup>
- <objectgroup color="#ff00ff" id="4" name="objects" offsetx="-81" offsety="0">
-  <object id="29" name="transition" x="955.365" y="279.07" width="40" height="120">
+ <objectgroup color="#ff00ff" id="5" name="objects">
+  <object id="3" name="transition" x="0" y="280" width="40" height="120">
    <properties>
     <property name="map" value="room2"/>
-    <property name="marker" value="entry"/>
+    <property name="marker" value="entry2"/>
    </properties>
   </object>
-  <object id="98" name="Interactable" type="door" x="143.302" y="359.866">
-   <polygon points="0,0 111.586,-94.8484 109.727,-319.881 -19.5276,-318.951"/>
+  <object id="5" name="door" x="775" y="265">
+   <polygon points="11,-60 -71,10 76,158 199,71"/>
   </object>
-  <object id="99" name="Interactable" type="door" x="143.302" y="361.726">
-   <polygon points="0,0 65.0921,9.29887 129.254,-89.2691 111.586,-94.8484 108.797,-95.7783"/>
-  </object>
- </objectgroup>
- <objectgroup color="#7f00ff" id="5" name="markers" offsetx="-81" offsety="0">
-  <object id="20" name="spawn" x="278.698" y="336.141">
+  <object id="6" name="npc" x="840" y="356">
+   <properties>
+    <property name="actor" value="door"/>
+   </properties>
    <point/>
   </object>
-  <object id="30" name="entry" x="933.963" y="352.561">
+  <object id="7" name="transition" x="777" y="286">
+   <properties>
+    <property name="map" value="elevator"/>
+    <property name="marker" value="entry"/>
+   </properties>
+   <polygon points="0,0 5,-19 106,58 92,74"/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#7f00ff" id="4" name="markers">
+  <object id="2" name="spawn" x="538" y="337">
+   <point/>
+  </object>
+  <object id="4" name="entry" x="80" y="360">
+   <point/>
+  </object>
+  <object id="8" name="entry2" x="770" y="337">
    <point/>
   </object>
  </objectgroup>

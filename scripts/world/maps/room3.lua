@@ -9,68 +9,23 @@ return {
   height = 14,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 11,
-  nextobjectid = 103,
+  nextlayerid = 6,
+  nextobjectid = 9,
   properties = {
-    ["name"] = "??? - Cancelled Chapter"
+    ["music"] = ""
   },
-  tilesets = {
-    {
-      name = "castle",
-      firstgid = 1,
-      filename = "../tilesets/castle.tsx",
-      exportfilename = "../tilesets/castle.lua"
-    },
-    {
-      name = "tilesetfight",
-      firstgid = 41,
-      filename = "../tilesets/tilesetfight.tsx",
-      exportfilename = "../tilesets/tilesetfight.lua"
-    }
-  },
+  tilesets = {},
   layers = {
     {
       type = "imagelayer",
-      image = "../../../assets/sprites/bg3.png",
-      id = 9,
-      name = "bg3",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = -1589.26,
-      offsety = -855.597,
-      parallaxx = 1,
-      parallaxy = 1,
-      repeatx = false,
-      repeaty = false,
-      properties = {}
-    },
-    {
-      type = "imagelayer",
-      image = "../../../assets/sprites/bg4.png",
-      id = 10,
+      image = "../../../assets/sprites/afterbattle.png",
+      id = 2,
       name = "bg",
       class = "",
       visible = true,
       opacity = 1,
-      offsetx = 35,
-      offsety = -111,
-      parallaxx = 1,
-      parallaxy = 1,
-      repeatx = false,
-      repeaty = false,
-      properties = {}
-    },
-    {
-      type = "imagelayer",
-      image = "../../../assets/sprites/bg2.png",
-      id = 8,
-      name = "bg2",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 34.7388,
-      offsety = -115.597,
+      offsetx = 34.74,
+      offsety = -115.6,
       parallaxx = 1,
       parallaxy = 1,
       repeatx = false,
@@ -84,234 +39,36 @@ return {
       name = "collision",
       class = "",
       visible = true,
-      opacity = 0.5,
-      offsetx = -81,
-      offsety = 0,
-      parallaxx = 1,
-      parallaxy = 1,
-      properties = {},
-      objects = {
-        {
-          id = 3,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 841.25,
-          y = 269.75,
-          width = 206.174,
-          height = 3.25,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 5,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 844.424,
-          y = 401.86,
-          width = 196.5,
-          height = 3,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 65,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 291,
-          y = 218.5,
-          width = 466.5,
-          height = 4.5,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 70,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 120.555,
-          y = 503.11,
-          width = 677.25,
-          height = 14.25,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 71,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 111.256,
-          y = 393.344,
-          width = 8,
-          height = 111.375,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 95,
-          name = "",
-          type = "",
-          shape = "polygon",
-          x = 117.369,
-          y = 388.237,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 138.276, y = -124.097 },
-            { x = 146.836, y = -123.426 },
-            { x = 0, y = 7.37875 }
-          },
-          properties = {}
-        },
-        {
-          id = 100,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 264.5,
-          y = 264.75,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 0, y = -41.5 },
-            { x = 26.5, y = -41.75 }
-          },
-          properties = {}
-        },
-        {
-          id = 101,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 758.5,
-          y = 223.5,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0, y = 0 },
-            { x = 82.75, y = 49.75 }
-          },
-          properties = {}
-        },
-        {
-          id = 102,
-          name = "",
-          type = "",
-          shape = "polyline",
-          x = 797,
-          y = 516.5,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polyline = {
-            { x = 0.5, y = -13.75 },
-            { x = 7, y = -72 },
-            { x = 47.5, y = -114.75 }
-          },
-          properties = {}
-        }
-      }
-    },
-    {
-      type = "objectgroup",
-      draworder = "topdown",
-      id = 4,
-      name = "objects",
-      class = "",
-      visible = true,
       opacity = 1,
-      offsetx = -81,
+      offsetx = 0,
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
       objects = {
         {
-          id = 27,
-          name = "savepoint",
+          id = 1,
+          name = "",
           type = "",
-          shape = "rectangle",
-          x = 478.066,
-          y = 322.546,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["text1"] = "* The scent of flowers\nis stronger here...",
-            ["text2"] = "* You feel like your final\nchapter is about to broadcast."
-          }
-        },
-        {
-          id = 29,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = 1000,
-          y = 280,
-          width = 40,
-          height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "room2",
-            ["marker"] = "entry"
-          }
-        },
-        {
-          id = 98,
-          name = "Interactable",
-          type = "door",
-          shape = "polygon",
-          x = 143.302,
-          y = 359.866,
+          shape = "polyline",
+          x = 37,
+          y = 272,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
-          polygon = {
+          polyline = {
             { x = 0, y = 0 },
-            { x = 111.586, y = -94.8484 },
-            { x = 109.727, y = -319.881 },
-            { x = -19.5276, y = -318.951 }
-          },
-          properties = {}
-        },
-        {
-          id = 99,
-          name = "Interactable",
-          type = "door",
-          shape = "polygon",
-          x = 143.302,
-          y = 361.726,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 65.0921, y = 9.29887 },
-            { x = 129.254, y = -89.2691 },
-            { x = 111.586, y = -94.8484 },
-            { x = 108.797, y = -95.7783 }
+            { x = 152, y = 2 },
+            { x = 250, y = -57 },
+            { x = 735, y = -54 },
+            { x = 736, y = -12 },
+            { x = 878, y = 112 },
+            { x = 878, y = 237 },
+            { x = 200, y = 240 },
+            { x = 188, y = 170 },
+            { x = 149, y = 128 },
+            { x = -2, y = 127 }
           },
           properties = {}
         }
@@ -321,23 +78,111 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 5,
-      name = "markers",
+      name = "objects",
       class = "",
       visible = true,
       opacity = 1,
-      offsetx = -81,
+      offsetx = 0,
       offsety = 0,
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
       objects = {
         {
-          id = 20,
+          id = 3,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 280,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "room2",
+            ["marker"] = "entry2"
+          }
+        },
+        {
+          id = 5,
+          name = "door",
+          type = "",
+          shape = "polygon",
+          x = 775,
+          y = 265,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 11, y = -60 },
+            { x = -71, y = 10 },
+            { x = 76, y = 158 },
+            { x = 199, y = 71 }
+          },
+          properties = {}
+        },
+        {
+          id = 6,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 840,
+          y = 356,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "door"
+          }
+        },
+        {
+          id = 7,
+          name = "transition",
+          type = "",
+          shape = "polygon",
+          x = 777,
+          y = 286,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 5, y = -19 },
+            { x = 106, y = 58 },
+            { x = 92, y = 74 }
+          },
+          properties = {
+            ["map"] = "elevator",
+            ["marker"] = "entry"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 4,
+      name = "markers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 2,
           name = "spawn",
           type = "",
           shape = "point",
-          x = 545.575,
-          y = 354.739,
+          x = 538,
+          y = 337,
           width = 0,
           height = 0,
           rotation = 0,
@@ -345,12 +190,25 @@ return {
           properties = {}
         },
         {
-          id = 30,
+          id = 4,
           name = "entry",
           type = "",
           shape = "point",
-          x = 960,
+          x = 80,
           y = 360,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 8,
+          name = "entry2",
+          type = "",
+          shape = "point",
+          x = 770,
+          y = 337,
           width = 0,
           height = 0,
           rotation = 0,

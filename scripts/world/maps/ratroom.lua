@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 11,
-  nextobjectid = 103,
+  nextobjectid = 106,
   properties = {
     ["name"] = "??? - Cancelled Chapter"
   },
@@ -31,39 +31,7 @@ return {
   layers = {
     {
       type = "imagelayer",
-      image = "../../../assets/sprites/bg3.png",
-      id = 9,
-      name = "bg3",
-      class = "",
-      visible = false,
-      opacity = 1,
-      offsetx = -1589.26,
-      offsety = -855.597,
-      parallaxx = 1,
-      parallaxy = 1,
-      repeatx = false,
-      repeaty = false,
-      properties = {}
-    },
-    {
-      type = "imagelayer",
-      image = "../../../assets/sprites/bg4.png",
-      id = 10,
-      name = "bg",
-      class = "",
-      visible = true,
-      opacity = 1,
-      offsetx = 35,
-      offsety = -111,
-      parallaxx = 1,
-      parallaxy = 1,
-      repeatx = false,
-      repeaty = false,
-      properties = {}
-    },
-    {
-      type = "imagelayer",
-      image = "../../../assets/sprites/bg2.png",
+      image = "../../../assets/sprites/beforebattle.png",
       id = 8,
       name = "bg2",
       class = "",
@@ -91,32 +59,6 @@ return {
       parallaxy = 1,
       properties = {},
       objects = {
-        {
-          id = 3,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 841.25,
-          y = 269.75,
-          width = 206.174,
-          height = 3.25,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 5,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 844.424,
-          y = 401.86,
-          width = 196.5,
-          height = 3,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
         {
           id = 65,
           name = "",
@@ -227,6 +169,25 @@ return {
             { x = 47.5, y = -114.75 }
           },
           properties = {}
+        },
+        {
+          id = 104,
+          name = "",
+          type = "",
+          shape = "polygon",
+          x = 838.333,
+          y = 270.667,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polygon = {
+            { x = 0, y = 0 },
+            { x = 6.66667, y = 131.333 },
+            { x = -2, y = 141.333 },
+            { x = -8, y = -4 }
+          },
+          properties = {}
         }
       }
     },
@@ -243,79 +204,7 @@ return {
       parallaxx = 1,
       parallaxy = 1,
       properties = {},
-      objects = {
-        {
-          id = 27,
-          name = "savepoint",
-          type = "",
-          shape = "rectangle",
-          x = 478.066,
-          y = 322.546,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["text1"] = "* The scent of flowers\nis stronger here...",
-            ["text2"] = "* You feel like your final\nchapter is about to broadcast."
-          }
-        },
-        {
-          id = 29,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = 1000,
-          y = 280,
-          width = 40,
-          height = 120,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "room2",
-            ["marker"] = "entry"
-          }
-        },
-        {
-          id = 98,
-          name = "Interactable",
-          type = "door",
-          shape = "polygon",
-          x = 143.302,
-          y = 359.866,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 111.586, y = -94.8484 },
-            { x = 109.727, y = -319.881 },
-            { x = -19.5276, y = -318.951 }
-          },
-          properties = {}
-        },
-        {
-          id = 99,
-          name = "Interactable",
-          type = "door",
-          shape = "polygon",
-          x = 143.302,
-          y = 361.726,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = 65.0921, y = 9.29887 },
-            { x = 129.254, y = -89.2691 },
-            { x = 111.586, y = -94.8484 },
-            { x = 108.797, y = -95.7783 }
-          },
-          properties = {}
-        }
-      }
+      objects = {}
     },
     {
       type = "objectgroup",
@@ -336,8 +225,8 @@ return {
           name = "spawn",
           type = "",
           shape = "point",
-          x = 545.575,
-          y = 354.739,
+          x = 489.198,
+          y = 340.141,
           width = 0,
           height = 0,
           rotation = 0,
@@ -345,12 +234,12 @@ return {
           properties = {}
         },
         {
-          id = 30,
+          id = 105,
           name = "entry",
           type = "",
           shape = "point",
-          x = 960,
-          y = 360,
+          x = 489,
+          y = 340,
           width = 0,
           height = 0,
           rotation = 0,

@@ -9,7 +9,7 @@
  <tileset firstgid="1" source="../tilesets/castle.tsx"/>
  <tileset firstgid="41" source="../tilesets/tilesetfight.tsx"/>
  <imagelayer id="8" name="bg2" offsetx="34.7388" offsety="-115.597">
-  <image source="../../../assets/sprites/bg2.png" width="880" height="660"/>
+  <image source="../../../assets/sprites/beforebattle.png" width="880" height="660"/>
  </imagelayer>
  <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5" offsetx="-81" offsety="0">
   <object id="65" x="291" y="218.5" width="466.5" height="4.5"/>

@@ -21,8 +21,7 @@ return {
     {
       name = "elevator",
       firstgid = 3,
-      filename = "../tilesets/elevator.tsx",
-      exportfilename = "../tilesets/elevator.lua"
+      filename = "../tilesets/elevator.tsx"
     }
   },
   layers = {

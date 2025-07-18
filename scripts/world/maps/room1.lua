@@ -106,22 +106,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 27,
-          name = "savepoint",
-          type = "",
-          shape = "rectangle",
-          x = 478.066,
-          y = 322.546,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["text1"] = "* The scent of flowers\nis stronger here...",
-            ["text2"] = "* You feel like your final\nchapter is about to broadcast."
-          }
-        },
-        {
           id = 4,
           name = "fakecactus",
           type = "",
@@ -168,7 +152,7 @@ return {
           x = 920,
           y = 280,
           width = 40,
-          height = 142,
+          height = 120,
           rotation = 0,
           visible = true,
           properties = {

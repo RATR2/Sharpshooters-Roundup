@@ -12,7 +12,8 @@ return {
   nextlayerid = 6,
   nextobjectid = 9,
   properties = {
-    ["music"] = ""
+    ["music"] = "",
+    ["name"] = ""
   },
   tilesets = {},
   layers = {

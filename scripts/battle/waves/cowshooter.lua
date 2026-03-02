@@ -1,9 +1,9 @@
 local Basic, super = Class(Wave)
 
 function Basic:onStart()
-    self.time = 12
+    self.time = 5
     -- Every 0.33 seconds...
-    self.timer:every(1/2, function()
+    self.timer:everyInstant(1/2, function()
         -- Our X position is offscreen, to the right
         local x = SCREEN_WIDTH + 80
         -- Get a random Y position between the top and the bottom of the arena
@@ -12,6 +12,7 @@ function Basic:onStart()
 
         -- Spawn smallbullet going left with speed 8 (see scripts/battle/bullets/smallbullet.lua)
         local bullet = self:spawnBullet("big-bullet", x, y, math.rad(180), 11)
+        Assets.playSound("whip_throw_only")
 
         -- Dont remove the bullet offscreen, because we spawn it offscreen
         bullet.remove_offscreen = false

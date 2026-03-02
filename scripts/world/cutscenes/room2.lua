@@ -1,4 +1,5 @@
 return {
+    ---@param cutscene WorldCutscene
     encounter = function(cutscene, event)
         local function afterAttack(kris, susie, ralsei, tweentype, choice)
             local newkris_x, _ = cutscene:getMarker("krisknockloc")
@@ -102,6 +103,47 @@ return {
             ralseiDown(data.ralsei, data.tweentype)
         end
 
+        local function afterFirstChoice(data)
+            local protectedChoice = data.choice
+            local flowers = Game.world.map:getImageLayer("Flowers")
+            cutscene:wait(0.1)
+            Assets.playSound("criticalswing",2,1)
+            Game.music:setLooping(false)
+            Game.music:play("renewal")
+            local msobject = MusicWaiter()
+            Game.world:addChild(msobject)
+            msobject:setLenght(40)
+            if protectedChoice == 4 then
+                skillissue(data)
+            elseif protectedChoice == 3 then
+                selfcare(data)
+            end
+            --cutscene:wait(msobject:getTime()/2) im impatient lmao
+            cutscene:wait(cutscene:fadeOut(0.2))
+            local _, tennadownlocy = cutscene:getMarker("tennadownloc")
+            data.tenna.y = tennadownlocy
+            data.tenna:setSprite("death")
+            cutscene:wait(cutscene:fadeIn(0.2))
+            cutscene:wait(0.3)
+            data.tenna:shake(2)
+            cutscene:wait(0.2)
+            --print(msobject:getTime() or "not how this works") 
+            --cutscene:wait(msobject:getTime()) lmao
+            msobject:remove()
+            local _, tennahappyplacey = cutscene:getMarker("ITSTVTIMEOUT")
+            Game.world.timer:tween(2,data.tenna, {y = tennahappyplacey },tweentype)
+            Game.world.timer:tween(1,flowers, {x = flowers.x - 200 },"in-cubic")
+            cutscene:wait(0.5)
+            Game.music:stop()
+            cutscene:startEncounter("cowboy", true, {data.tenna})
+            if protectedChoice == 4 then 
+                Game:addPartyMember("ralsei")
+            elseif protectedChoice == 3 then
+                Game:addPartyMember("susie")
+                Game:addPartyMember("ralsei")
+            end
+        end
+
         local aurafarming = false -- real
         local tweentype = "out-cubic"
         local kris = cutscene:getCharacter("kris")
@@ -115,7 +157,9 @@ return {
         cutscene:panTo(cam_x, cam_y)
         cutscene:walkTo("kris", "krisloc", 1)
         cutscene:walkTo("susie", "susieloc", 1)
-        cutscene:wait(cutscene:walkTo("ralsei", "ralseiloc", 1))
+        if ralsei then
+            cutscene:wait(cutscene:walkTo("ralsei", "ralseiloc", 1))
+        end
         cutscene:setSpeaker(susie)
         cutscene:text("* Finally.[wait:2]\n* Took long enough to get in here", "nervous_side")
         cutscene:setSpeaker(ralsei)
@@ -133,11 +177,15 @@ return {
         cutscene:setSpeaker(ralsei)
         cutscene:text("* Susie... i dont think that's-[next:true]", "pensive")
         cutscene:setSpeaker(tenna)
-        ralsei:setSprite("battle/hurt_1")
+        if ralsei then
+            ralsei:setSprite("battle/hurt_1")
+        end
         Assets.playSound("impact")
         tenna:setSprite("handsup")
         cutscene:text("* NO.[wait:2]\n* IT IS TOO LATE.")
-        ralsei:setSprite("walk/right_1")
+        if ralsei then
+            ralsei:setSprite("walk/right_1")
+        end
         tenna:setAnimation("up")
         cutscene:text("* IT FEEDS ON ATTENTION.[wait:1]\n* AND IT HAS BEEN STARVING.")
         Assets.playSound("hurt")
@@ -153,57 +201,58 @@ return {
         cutscene:wait(1)
         local waittmr = 0.35
         local detune = 1.2
-        Assets.playSound("stardrop",1,detune)
-        cutscene:wait(waittmr)
-        Assets.playSound("stardrop",1,detune)
-        cutscene:wait(waittmr)
-        Assets.playSound("stardrop",1,detune)
-        cutscene:wait(waittmr+1)
+
+        for i = 1,3 do
+            Assets.playSound("stardrop",1,detune)
+            cutscene:wait(waittmr)
+        end
+
+        cutscene:wait(1)
         Assets.playSound("bigcut",1,1.1)
         cutscene:wait(0.6)
-        local protectedChoice = cutscene:choicer({"Protect Susie", "Protect Ralsei", "Protect Kris", "..."})
-        cutscene:wait(0.1)
-        Assets.playSound("criticalswing",2,1)
+        local choosed = false
+        local waitCutscene = 0
+        local triggered = false
+        cutscene:during(function()
+            if choosed == true then
+                return true
+            end
+
+            waitCutscene = waitCutscene + 0.1 * DTMULT
+            if waitCutscene >= 3 and not triggered then
+                triggered = true
+                -- cutscene:closeText() <- this crashes the game for some reason
+                return true
+            end
+        end)
+        local protectedChoice = cutscene:choicer({"Protect Susie", "Protect Ralsei", "Protect Kris"})
+        choosed = true
+        -- print("triggered: " .. ((triggered and "true") or "false"))
         local data = {
             event = event,
             kris = kris,
             ralsei = ralsei,
             susie = susie,
+            tenna = tenna,
             aurafarming = aurafarming,
             tweentype = tweentype,
-            choice = protectedChoice
         }
-        Game.music:setLooping(false)
-        Game.music:play("renewal")
-        local msobject = MusicWaiter()
-        Game.world:addChild(msobject)
-        msobject:setLenght(40)
-        if protectedChoice == 4 then
-            skillissue(data)
-        elseif protectedChoice == 3 then
-            selfcare(data)
+        if triggered then
+            local camX, camY = Game.world.camera:getPosition()
+            local notime = Text("TOO SLOW!", camX, camY)
+            local textX, textY = notime:getPosition()
+            textX, textY = textX, textY - notime:getSize() / 2
+            notime:setPosition(textX, textY)
+            notime:setTextColor(1, 0, 0, 1)
+            notime.layer = WORLD_LAYERS["top"]
+            kris.world:addChild(notime)
+            Assets.playSound("error")
+            cutscene:wait(1)
+            kris.world:removeChild(notime)
+            data.choice = 4
+        else
+            data.choice = protectedChoice
         end
-        cutscene:wait(msobject:getTime()/2)
-        cutscene:wait(cutscene:fadeOut(0.2))
-        local _, tennadownlocy = cutscene:getMarker("tennadownloc")
-        tenna.y = tennadownlocy
-        tenna:setSprite("death")
-        cutscene:wait(cutscene:fadeIn(0.2))
-        cutscene:wait(0.3)
-        tenna:shake(2)
-        cutscene:wait(0.2)
-        --print(msobject:getTime() or "not how this works") 
-        cutscene:wait(msobject:getTime())
-        msobject:remove()
-        local _, tennahappyplacey = cutscene:getMarker("ITSTVTIMEOUT")
-        Game.world.timer:tween(2,tenna, {y = tennahappyplacey },tweentype)
-        cutscene:wait(0.5)
-        cutscene:startEncounter("dummy")
-        if protectedChoice == 4 then 
-            Game:addPartyMember("ralsei")
-        elseif protectedChoice == 3 then
-            Game:addPartyMember("susie")
-            Game:addPartyMember("ralsei")
-        end
+        afterFirstChoice(data)
     end
 }

@@ -10,13 +10,16 @@ function BigBullet:init(x, y, dir, speed)
     self.scale_x = 6
     self.scale_y = 6
     self.physics.speed = speed
+    self.destroy_on_hit = false
 end
 
 function BigBullet:update()
     self.physics.speed = self.physics.speed + 1
     -- For more complicated bullet behaviours, code here gets called every update
-    if self.x <= Game.battle.arena.left then
-        self:explode()
+    if self.x <= (Game.battle.arena:getLeft() + self.scale_x * 2) then
+        self:remove()
+        self.wave:spawnBullet("impact", self.x, self.y)
+        Assets.playSound("bomb")
     end
     super.update(self)
 end

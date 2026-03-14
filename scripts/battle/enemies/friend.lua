@@ -29,6 +29,7 @@ function Cowboy:init()
         "lasso",
         "rebound",
         "flyingcorks",
+        "face",
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
@@ -48,7 +49,10 @@ function Cowboy:init()
         {
             "Cockroaches, corkraches",
             "What's the difference?"
-        }
+        },
+        {
+            "Face attack placeholder"
+        },
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)

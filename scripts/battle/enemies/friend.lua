@@ -30,6 +30,7 @@ function Cowboy:init()
         "rebound",
         "flyingcorks",
         "face",
+        "shooting",
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
@@ -52,6 +53,9 @@ function Cowboy:init()
         },
         {
             "Face attack placeholder"
+        },
+        {
+            "Shooting attack placeholder"
         },
     }
 
@@ -93,16 +97,6 @@ function Cowboy:update()
     
     if self.factive then
         self.flowers:setPosition(self.flowers.x - 480*DT, self.flowers.y)
-    end
-
-    -- print(Game.battle:getState())
-    if Game.battle:getState() == "ENEMYDIALOGUE" and self.play then
-        self.play = false
-        Game.battle:setState("NONE")
-        local msmobject = MusicMinigame()
-        Game.battle:addChild(msmobject)
-        msmobject:set(Game.battle.music, "minigame_banjo_inst", "minigame_banjo_banjo")
-        msmobject:playShort(12, function() Game.battle:setState("ACTIONSELECT") end)
     end
 end
 

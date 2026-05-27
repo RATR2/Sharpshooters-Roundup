@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="9">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="40" tileheight="40" infinite="0" nextlayerid="8" nextobjectid="14">
  <editorsettings>
   <export target="room3.lua" format="lua"/>
  </editorsettings>
@@ -15,15 +15,12 @@
    <polyline points="0,0 152,2 250,-57 735,-54 736,-12 878,112 878,237 200,240 188,170 149,128 -2,127"/>
   </object>
  </objectgroup>
- <objectgroup color="#ff00ff" id="5" name="objects">
+ <objectgroup color="#ff00ff" id="5" name="objects_below">
   <object id="3" name="transition" x="0" y="280" width="40" height="120">
    <properties>
     <property name="map" value="room2"/>
     <property name="marker" value="entry2"/>
    </properties>
-  </object>
-  <object id="5" name="door" x="775" y="265">
-   <polygon points="11,-60 -71,10 76,158 199,71"/>
   </object>
   <object id="6" name="npc" x="840" y="356">
    <properties>
@@ -31,7 +28,18 @@
    </properties>
    <point/>
   </object>
-  <object id="7" name="transition" x="777" y="286">
+ </objectgroup>
+ <objectgroup color="#ff00ff" id="7" name="objects">
+  <object id="10" name="transition" x="0" y="280" width="40" height="120">
+   <properties>
+    <property name="map" value="room2"/>
+    <property name="marker" value="entry2"/>
+   </properties>
+  </object>
+  <object id="11" name="door" x="775" y="265">
+   <polygon points="11,-60 -71,10 76,158 199,71"/>
+  </object>
+  <object id="13" name="transition" x="777" y="286">
    <properties>
     <property name="map" value="elevator"/>
     <property name="marker" value="entry"/>

@@ -1,7 +1,39 @@
-local Cowboy, super = Class(EnemyBattler)
+local Tv, super = Class(EnemyBattler)
 
-function Cowboy:init()
+-- This is hyperboid code taken... doubtfully, future me! remebember to credit correctly!
+function Tv:onRegistered()
+    self.charts = {}
+
+    print("LOADING CHARTS")
+    for _,path,data in Registry.iterScripts("data/charts") do
+        print("!! " .. path)
+        local split_path = StringUtils.split(path, "/", true)
+        if isClass(data) then
+            print("CLASS")
+            -- if split_path[#split_path] == "song" then
+            --     self.charts[table.concat(split_path, "/", 1, #split_path-1)] = data
+            -- else
+            --     self.charts[path] = data
+            -- end
+        else
+            if split_path[#split_path] == "chart" then
+                data.id = table.concat(split_path, "/", 1, #split_path-1)
+                self.charts[data.id] = data
+            else
+                data.id = path
+                self.charts[path] = data
+            end
+            print("DATAID: " .. data.id)
+        end
+    end
+end
+
+function Tv:init()
     super.init(self)
+    self.static = Static()
+    Game.stage:addChild(self.static)
+
+    self:onRegistered()
 
     self.name = "TV"
     -- Sets the actor, which handles the enemy's sprites (see scripts/data/actors/dummy.lua)
@@ -32,19 +64,38 @@ function Cowboy:init()
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
     -- self:registerAct("Sing Along", "Plays a familiar tune", {"ralsei"})
+    self.chart = self.charts["charts/minigame_banjo"]
 end
 
-function Cowboy:update()
+function Tv:hideEnemies(hide)
+    if hide == nil then hide = true end
+    print("if", (hide ~= nil) and hide or true)
+    print("hide", hide)
+    for i,enemy in pairs(Game.battle.enemies) do
+        enemy.visible = not hide
+    end
+end
+
+function Tv:update()
     super.update(self)
 
     -- print(Game.battle:getState())
     if Game.battle:getState() == "ENEMYDIALOGUE" and self.play then
         self.play = false
-        Game.battle:setState("NONE")
         local msmobject = MusicMinigame()
         Game.battle:addChild(msmobject)
-        msmobject:set(Game.battle.music, "minigame_banjo_inst", "minigame_banjo_banjo")
-        msmobject:playShort(12, function() Game.battle:setState("ACTIONSELECT") end)
+        Game.battle:setState("NONE")
+        self.static:trigger(0.2, true)
+        self:hideEnemies()
+        msmobject:set(Game.battle.music, "minigame_banjo_inst", "minigame_banjo_banjo", love.filesystem.read("chart.json"), Game.battle.party)
+        local tv = self
+        msmobject:playShort(12, function()
+            Game.battle:setState("ACTIONSELECT")
+            tv.static:trigger(nil, false)
+            print("a", nil, false)
+            tv:hideEnemies(false)
+            print("b", false)
+        end)
 
         local attackers = Game.battle.enemies
         -- Loop through all attackers
@@ -54,11 +105,11 @@ function Cowboy:update()
     end
 end
 
-function Cowboy:defeat(reason, violent)
+function Tv:defeat(reason, violent)
     super.defeat(self, reason, violent)
 end
 
-function Cowboy:onAct(battler, name)
+function Tv:onAct(battler, name)
     print(name)
     if name == "Standard" then --X-Action
         -- Give the enemy 50% mercy
@@ -99,4 +150,4 @@ function Cowboy:onAct(battler, name)
     return super.onAct(self, battler, name)
 end
 
-return Cowboy
+return Tv

@@ -9,8 +9,8 @@ return {
   height = 14,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 6,
-  nextobjectid = 9,
+  nextlayerid = 8,
+  nextobjectid = 14,
   properties = {
     ["music"] = "",
     ["name"] = ""
@@ -79,7 +79,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 5,
-      name = "objects",
+      name = "objects_below",
       class = "",
       visible = true,
       opacity = 1,
@@ -106,7 +106,54 @@ return {
           }
         },
         {
-          id = 5,
+          id = 6,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 840,
+          y = 356,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "door"
+          }
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 7,
+      name = "objects",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 10,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 0,
+          y = 280,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "room2",
+            ["marker"] = "entry2"
+          }
+        },
+        {
+          id = 11,
           name = "door",
           type = "",
           shape = "polygon",
@@ -125,22 +172,7 @@ return {
           properties = {}
         },
         {
-          id = 6,
-          name = "npc",
-          type = "",
-          shape = "point",
-          x = 840,
-          y = 356,
-          width = 0,
-          height = 0,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["actor"] = "door"
-          }
-        },
-        {
-          id = 7,
+          id = 13,
           name = "transition",
           type = "",
           shape = "polygon",

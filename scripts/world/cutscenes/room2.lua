@@ -131,10 +131,13 @@ return {
             --cutscene:wait(msobject:getTime()) lmao
             msobject:remove()
             local _, tennahappyplacey = cutscene:getMarker("ITSTVTIMEOUT")
-            Game.world.timer:tween(2,data.tenna, {y = tennahappyplacey },tweentype)
-            Game.world.timer:tween(1,flowers, {x = flowers.x - 200 },"in-cubic")
+            Game.world.timer:tween(0.5,data.tenna, {y = tennahappyplacey },tweentype)
+            Game.world.timer:tween(0.4,flowers, {x = flowers.x - 200 },"in-cubic")
             cutscene:wait(0.5)
             Game.music:stop()
+            local tennatvplacex, tennatvplacey = cutscene:getMarker("ITSTVTIME")
+            data.tenna:setPosition(tennatvplacex, tennatvplacey)
+            cutscene:wait(0.1)
             cutscene:startEncounter("cowboy", true, {data.tenna})
             if protectedChoice == 4 then 
                 Game:addPartyMember("ralsei")

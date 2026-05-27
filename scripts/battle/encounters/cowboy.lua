@@ -12,10 +12,20 @@ function Cowboy:init()
     self.background = false
 
     -- Add the dummy enemy to the encounter
-    self:addEnemy("friend")
+    self:addEnemy("friend", 494, 260)
 
     --- Uncomment this line to add another!
-    self:addEnemy("tv")
+    self:addEnemy("tv", 578, 333)
+end
+
+function Cowboy:getPartyPosition(i)
+    if i == 1 then
+        return 80, 232
+    elseif i == 2 then
+        return 138, 278
+    else
+        return 90, 314
+    end
 end
 
 return Cowboy
